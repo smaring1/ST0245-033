@@ -50,6 +50,7 @@ public class Contador {
     * @return una cadena que contiene el id del contador y su cuenta
     */
     public String toString() {
-	    return ;
+	    
+	    return this.id+this.cuenta;
     }
 }
