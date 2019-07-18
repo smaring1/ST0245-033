@@ -1,7 +1,8 @@
+
 /**
  * La clase Contador tiene la intención de representar un contador.
  * 
- * @author Simon Marin, Miguel Fernando Ramos 
+ * @author Simon Marin, Miguel Fernando Ramos
  * @version 1
  */
 
@@ -14,8 +15,8 @@ public class Contador {
 	/**
      * Se inicializan las variables globales en el constructor de manera que no posean valores nulos o 0s.
      */
-    public Contador() {
-    
+    public Contador(int cuenta, String id) {
+	    
     }
 
     /**
@@ -24,7 +25,7 @@ public class Contador {
      *(opcional: se podria pasar un parametro "cantidad" para incrementar esa cantidad de unidades).
      */
     public void incrementar() {
-    
+
     }
 
     /*
@@ -36,7 +37,8 @@ public class Contador {
      * @return el numero actual de la cuenta
      */
     public int incrementos() {
-
+	    
+	    return ;
     }
 
     
@@ -48,6 +50,7 @@ public class Contador {
     * @return una cadena que contiene el id del contador y su cuenta
     */
     public String toString() {
-
+	    
+	    return id;
     }
 }
