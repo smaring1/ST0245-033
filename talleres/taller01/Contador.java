@@ -16,7 +16,8 @@ public class Contador {
      * Se inicializan las variables globales en el constructor de manera que no posean valores nulos o 0s.
      */
     public Contador(int cuenta, String id) {
-	    
+	    this.id = id;
+	    cuenta = 0;
     }
 
     /**
@@ -25,7 +26,7 @@ public class Contador {
      *(opcional: se podria pasar un parametro "cantidad" para incrementar esa cantidad de unidades).
      */
     public void incrementar() {
-
+	    cuenta += 1;
     }
 
     /*
@@ -37,8 +38,7 @@ public class Contador {
      * @return el numero actual de la cuenta
      */
     public int incrementos() {
-	    
-	    return ;
+	    return cuenta;
     }
 
     
@@ -50,7 +50,6 @@ public class Contador {
     * @return una cadena que contiene el id del contador y su cuenta
     */
     public String toString() {
-	    
-	    return id;
+	    return ;
     }
 }
