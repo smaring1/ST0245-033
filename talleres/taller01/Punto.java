@@ -1,7 +1,7 @@
 /**
  * La clase Punto tiene la intención de representar coordenadas en el espacio y calcular su distancia.
  * 
- * @author Mauricio Toro, Andres Paez, Daniel Mesa 
+ * @author Simon Marin, Miguel Fernando Ramos
  * @version 2
  */
 //Nota: Hacen falta algunas partes de las lineas de codigo, estas estan indicadas con una linea, ¡debes completarlas!
