@@ -13,8 +13,8 @@ public class Punto {
      * Se inicializan las variables globales en el constructor de manera que no posean valores nulos o 0s.
      */
     public Punto(double x, double y) {
-	___.x = x;
-        ___.y = y;
+	this.x = x;
+        this.y = y;
     }
 
     /**
@@ -45,7 +45,7 @@ public class Punto {
      */
     
     public double radioPolar() {
-	return ____.sqrt(x * x + y * y);
+	return Math.sqrt(x * x + y * y);
     }
 
 
@@ -58,7 +58,7 @@ public class Punto {
      * @see <a href="http://mathworld.wolfram.com/PolarCoordinates.html"> Ver más <a/>
      */
     public double anguloPolar() {
-	return Math._____(y / x);
+	return Math.tan(y / x);
     }
 
     /**
