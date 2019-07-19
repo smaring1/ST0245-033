@@ -31,7 +31,6 @@ public class Main {
         Fecha f2 = new Fecha(26, 5, 2001);
         System.out.println(f1);
         System.out.println(f2);
-        // 1
         System.out.println(f1.comparar(f2));
     }
 }
