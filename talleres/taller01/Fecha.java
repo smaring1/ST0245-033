@@ -75,7 +75,7 @@ public class Fecha {
      *
      */
 
-    public int comparar(Fecha otra) {
+    public int comparar(Fecha otra) { //TODO: convertir los ifs en switch case.
         if (this.anyo < otra.anyo)
         return -1;
         if (this.anyo > otra.anyo)
