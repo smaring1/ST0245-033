@@ -22,11 +22,11 @@ public class Taller2 {
      * @return el máximo común divisor
      */
     
-  public static int gcd(int p, int q){
-        if(q==0){
+    public static int gcd(int p, int q) {
+        if (q == 0) {
             return p;
-        }else{
-            return gcd(q, p%q);
+        } else {
+            return gcd(q, p % q);
         }
     }
 
@@ -91,16 +91,14 @@ public class Taller2 {
      * @see <a href="http://ayudasprogramacionweb.blogspot.com/2013/02/modificadores-acceso-public-protected-private-java.html"> modificadores </a>
      *
      */
-
-     private static void combinationsAux(String prefix, String s) {
+    
+    
+    private static void combinationsAux(String prefix, String s) {
         if(s.length()==0){
             System.out.println(prefix);
-        }else{
+        } else {
             combinationsAux( prefix, s.substring(1));
             combinationsAux( prefix + s.charAt(0), s.substring(1));
         }
     }
-}
-
-
 }
