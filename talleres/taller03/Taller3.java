@@ -1,5 +1,4 @@
 
-package Taller__3;
 /**
  * La clase Taller3 tiene como objtivo dar solución a los puntos del taller 3
  *
