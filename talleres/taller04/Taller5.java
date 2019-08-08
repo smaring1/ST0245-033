@@ -58,6 +58,12 @@ public class Taller5 {
      * @return el valor encontrado en long dada la posible cantidad de bits
      */
     public static long fibonacci(int n) {
-        //...
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
+    //T(n) = T(n-1) + T(n-2) + c_2
+    //c_2 + T(n) - 2T(n-1)
 }
