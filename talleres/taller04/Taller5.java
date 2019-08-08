@@ -34,11 +34,14 @@ public class Taller5 {
      *
      * @return verdadero si hay una combinación que suponga el valor target, falso de lo contrario
      */
-    public static boolean groupSum(int start, int[] nums, int target) {
-        //...
-    }
-
-
+     public static boolean groupSum(int start, int[] nums, int target) {
+        if (start >= nums.length) { //C_1
+            return (target == 0);  //C_2
+        }
+        return (groupSum(start + 1, nums, target - nums[start])) || (groupSum(start + 1, nums, target)); // T(n) = T(n-1 ) + T(n-1 )
+        //T(n) = C_1*2^(n-1)
+     }
+    
     /**
      * @param n numero entero, hasta que numero se hace la serie
      *
