@@ -17,8 +17,16 @@ public class Taller5 {
      * @return la suma
      */
     public static int arrayMax(int[] array, int n) {
-        //...
+        int max, temp;
+        max = array[n];
+        if(n != 0) {
+            temp = arrayMax(array, n-1); //T(n) = T(n-1) + c2
+            if(temp >= max)
+            max = temp;
+        }
+        return max;
     }
+    //c_2 = T(n) - T(n-1)
 
     /**
      * @param start es un contador, nos sirve para saber cuando debemos parar
