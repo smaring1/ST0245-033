@@ -1,7 +1,7 @@
 
 /**
  *
- * @author Simon Marin, Miguel Fernando Ramos, Mauricio Toro
+ * @author Simon Marin, Miguel Fernando Ramos, Mauricio Toro, Andres Paez
  */
 public class TestTaller5 {
 
