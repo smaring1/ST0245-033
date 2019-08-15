@@ -16,12 +16,13 @@ public class Taller5 {
      * @return la suma de todos los numeros sumados.
      */
     public static int suma (int[]array){
-        int resultado = 0;
-        for (int i = 0; i < array.length ; i++) {
-            resultado += array[i];
+        int resultado = 0; // c1
+        for (int i = 0; i < array.length ; i++) { // n
+            resultado += array[i]; // n
         }
-        return resultado;
+        return resultado; // c2
     }
+    //T(n) = c1 + c2 + n + n
 
 
     /**
