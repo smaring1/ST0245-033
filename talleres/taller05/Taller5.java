@@ -32,9 +32,14 @@ public class Taller5 {
      * mediante una funcion cíclica (while/for/...)
      *
      */
-    public static void mul (int num){
-        //...
+    public static void mul (int num) {
+        for (int i = 0; i <= 10; i++) { // 3n
+            System.out.println(num + " x " + i + " = " + (num * i)); //n
+        }
     }
+    // T(n) = 3n+n
+    //O(3n+n)
+    //O(n)
 
 
     /**
