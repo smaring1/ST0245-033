@@ -1,7 +1,7 @@
 /**
  * La clase Taller5 tiene la intención de resolver el taller número 5.
  *
- * @author Mauricio Toro, Andres Paez
+ * @author Simon Marin, Miguel Fernando Ramos, Mauricio Toro, Andres Paez
  * @version 1
  */
 
