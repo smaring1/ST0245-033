@@ -14,16 +14,19 @@ public class Taller5 {
      * El método suma tiene la intención de hacer el proceso de suma
      * mediante una funcion cíclica (while/for/...)
      * @return la suma de todos los numeros sumados.
+     *    T(n) = c1 + c2 + 3n + n
+     *      O(c1+c2+3n+n)
+     *      O(3n)
+     *      O(n)
      */
     public static int suma (int[]array){
         int resultado = 0; // c1
-        for (int i = 0; i < array.length ; i++) { // n
+        for (int i = 0; i < array.length ; i++) { // 3n
             resultado += array[i]; // n
         }
         return resultado; // c2
     }
-    //T(n) = c1 + c2 + n + n
-
+ 
 
     /**
      * @param num es el numero el cual se utiliza para ser multiplicado.
@@ -39,8 +42,8 @@ public class Taller5 {
     }
     // T(n) = 3n+n
     //O(3n+n)
+    //O(3n)
     //O(n)
-
 
     /**
      * @param array es un arreglo de números desordenados
@@ -49,8 +52,23 @@ public class Taller5 {
      * @see <a href="https://www.youtube.com/watch?v=OGzPmgsI-pQ"> Insertion Sort <a/>
      * mediante la anidación de funciones cíclicas (while/for/...)
      *
+     * Complejidad...
+     *
+     * O(2n+1+1*n+n+2*n^2+(n^2)*2)+n^2+n+n)
+     * O(2*n^2)
+     * O(n^2)
+     *
      */
     public static int[] insertionSort (int[] array){
-        //...
+        for (int i = 1; i < array.length; i++) {  //2n+1
+            int key = array[i];     //1*n
+            int j = i-1;    // n
+            while(j>=0 && array[j]>key){ //2*n^2
+                array[j+1]=array[j];  //(n^2)*2
+                j--;    //n^2
+            }
+            array[j+1]=key; //n
+        }
+        return array; //n
     }
 }
