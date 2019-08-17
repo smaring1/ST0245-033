@@ -1,3 +1,6 @@
+/**
+ * @author Simon Marin, Miguel Fernando Ramos
+ */
 public class ejercicioEnLinea {
     public static void main(String[] args) {
         System.out.println("Recursion-1: \n");
