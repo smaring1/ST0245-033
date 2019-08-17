@@ -1,5 +1,6 @@
 public class ejercicioEnLinea {
     public static void main(String[] args) {
+        System.out.println("Recursion-1: \n");
         System.out.println("factorial: ");
         factorialTest();
         System.out.println("bunnyEars2: ");
@@ -10,6 +11,11 @@ public class ejercicioEnLinea {
         triangleTest();
         System.out.println("fibonacci: ");
         fibonacciTest();
+        System.out.println("\nRecursion-2:\n");
+        System.out.println("groupSum6: ");
+        groupSum6Test();
+        System.out.println("groupNoAdj: ");
+        groupNoAdjTest();
     }
 
     public static int factorial(int n) {
@@ -99,5 +105,80 @@ public class ejercicioEnLinea {
             System.out.println("Para n = " + pruebas[i] + " el valor en fibonacci es de: " + fibonacci(pruebas[i]));
         }
         System.out.println();
+    }
+
+    public static boolean groupSum6(int start, int[] nums, int target) {
+        if (start == nums.length) {
+            return target == 0;
+        }
+        if (nums[start] == 6) {
+            return groupSum6(start + 1, nums, target - nums[start]);
+        }
+        if (groupSum6(start + 1, nums, target - nums[start])) {
+            return true;
+        }
+        return groupSum6(start + 1, nums, target);
+    }
+
+    public static void groupSum6Test() {
+        int pruebaStart [] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        int pruebaNums [][] = {{5,6,2},{5,6,2},{5,6,2},{1},{9},{},{3,2,4,6},{6,2,4,3},{5,2,4,6},{6,2,4,5},{3,2,4,6},{1,6,2,6,4},{1,6,2,6,4},{1,6,2,6,4},{1,6,2,6,4},{1,6,2,6,5},{1,6,2,6,5},{1,6,2,6,5}};
+        int pruebaTarget [] = {8,9,7,1,1,0,8,8,9,9,3,12,13,4,9,14,15,16};
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Start en la posición "+i+": "+pruebaStart[i]);
+        }
+        System.out.println();
+        int i = 0;
+        do{
+            System.out.println("Target en la posición "+i+": "+pruebaTarget[i]);
+            i++;
+        }while(i<pruebaTarget.length);
+        System.out.println();
+        for (int [] a: pruebaNums
+        ) {
+            for (int b: a
+            ) {
+                System.out.println("Matriz en la posicion: "+b);
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static boolean groupNoAdj(int start, int[] nums, int target) {
+        if (start >= nums.length) {
+            return (target == 0);
+        }
+        if (groupNoAdj(start+1, nums, target)) {
+            return true;
+        }
+        if (groupNoAdj(start+2, nums, target-nums[start])) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void groupNoAdjTest() {
+        int pruebaStart [] = {0,0,0,0,0,0,0,0,0,0,0,0};
+        int pruebaNums [][] = {{2,5,10,4},{2,5,10,4},{2,5,10,4},{2,5,10,4},{2,5,10,4},{10,2,2,3},{10,2,2,3},{},{1},{9},{9},{5,10,4,1}};
+        int pruebaTarget [] = {12,14,7,7,9,15,7,0,1,1,0,11};
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Start en la posición "+i+": "+pruebaStart[i]);
+        }
+        System.out.println();
+        int i = 0;
+        do{
+            System.out.println("Target en la posición "+i+": "+pruebaTarget[i]);
+            i++;
+        }while(i<pruebaTarget.length);
+        System.out.println();
+        for (int [] a: pruebaNums
+             ) {
+            for (int b: a
+                 ) {
+                System.out.println("Matriz en la posicion: "+b);
+            }
+            System.out.println();
+        }
     }
 }
