@@ -109,7 +109,7 @@ public class ejercicioEnLinea {
         System.out.println();
     }
                  //RECURSION-2
-    public boolean groupSum6(int start, int[] nums, int target) {
+    public static boolean groupSum6(int start, int[] nums, int target) {
         if (start == nums.length) {
             return target == 0;
         }
@@ -122,7 +122,7 @@ public class ejercicioEnLinea {
         return groupSum6(start + 1, nums, target);
     }
 
-    public boolean groupNoAdj(int start, int[] nums, int target) {
+    public static boolean groupNoAdj(int start, int[] nums, int target) {
         if (start >= nums.length) {
             return (target == 0);
         }
@@ -135,22 +135,61 @@ public class ejercicioEnLinea {
         return false;
     }
 
-    public boolean splitOdd10(int[] nums) {
+    public static boolean groupSumClump(int start, int[] nums, int target) {
+        if (start >= nums.length) {
+            return target == 0;
+        }
+        int i = start;
+        int sum = 0;
+        while (i < nums.length && nums[start] == nums[i]) {
+            sum += nums[i];
+            i++;
+        }
+        if (groupSumClump(i, nums, target - sum)) {
+            return true;
+        }
+        if (groupSumClump(i, nums, target)) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean split53(int[] nums) {
         int index = 0;
         int sum1 = 0;
         int sum2 = 0;
         return recArray(nums, index, sum1, sum2);
     }
 
-    private boolean recArray ( int[] nums, int index, int sum1, int sum2 ) {
+    private static boolean recArray ( int[] nums, int index, int sum1, int sum2 ) {
         if ( index >= nums.length ) {
-            return (sum1%10 == 0 && sum2%2 !=0) || (sum2%10 == 0 && sum1%2 !=0);
+            return sum1 == sum2;
         }
-
         int value = nums[index];
+        if (value%5 == 0) {
+            return recArray(nums, index + 1, sum1 + value, sum2);
+        } else if (value%3 == 0) {
+            return recArray(nums, index + 1, sum1, sum2 + value);
+        } else {
+            return (recArray(nums, index + 1, sum1 + value, sum2) ||
+                    recArray(nums, index + 1, sum1, sum2 + value));
+        }
+    }
 
-        return (recArray(nums, index + 1, sum1 + value, sum2) ||
-                recArray(nums, index + 1, sum1, sum2 + value));
+    public static boolean splitArray(int[] nums) {
+        return splitArrayHelper(0, nums, 0, 0);
+    }
+
+    public static boolean splitArrayHelper(int start, int[] nums, int group1, int group2) {
+        if (start >= nums.length) {
+            return group1 == group2;
+        }
+        if (splitArrayHelper(start+1, nums, group1 + nums[start], group2)) {
+            return true;
+        }
+        if (splitArrayHelper(start+1, nums, group1, group2 + nums[start])) {
+            return true;
+        }
+        return false;
     }
 }
-
