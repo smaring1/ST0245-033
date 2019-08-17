@@ -1,7 +1,9 @@
 /**
  * @author Simon Marin, Miguel Fernando Ramos
  * Los códigos de Recursion-2 fueron tomados de solucionarios
- * de codingbat en internet.
+ * de codingbat en internet. El progreso de lo demás
+ * se puede verificar en codingbat
+ * https://codingbat.com/done?user=simonmaring11@gmail.com&tag=6200951609
  */
 public class ejercicioEnLinea {
     public static void main(String[] args) {
@@ -151,3 +153,4 @@ public class ejercicioEnLinea {
                 recArray(nums, index + 1, sum1, sum2 + value));
     }
 }
+
