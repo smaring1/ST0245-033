@@ -1,6 +1,6 @@
 /**
  * @author Simon Marin, Miguel Fernando Ramos
- * Los códigos de Recursion-2 fueron tomados de solucionarios
+ * Algunos códigos de Recursion-2 fueron tomados de solucionarios
  * de codingbat en internet. El progreso de lo demás
  * se puede verificar en codingbat
  * https://codingbat.com/done?user=simonmaring11@gmail.com&tag=6200951609
