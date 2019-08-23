@@ -40,7 +40,8 @@ public class MiArrayList {
     /**
      * @param e el elemento a guardar
      * Agrega un elemento e a la última posición de la lista
-     *
+     * Este método para agregar n caracteres 
+     * es de complejidad O(n).
      */
     public void add1(int e) {
         if (size == elements.length) { // C1 = 2      O(1)
