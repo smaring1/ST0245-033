@@ -11,6 +11,9 @@ public class ejercicioEnLinea {
         System.out.println("\n\nArray-3: ");
         maxSpanTest();
         squareUpTest();
+        maxMirrorTest();
+        linearInTest();
+        seriesUpTest();
     }
 
     public static int countEvens(int[] nums) {
@@ -171,7 +174,95 @@ public class ejercicioEnLinea {
         System.out.println("\nsquareUp: ");
         int [] pruebas = {3,2,4,1,0,6};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Para " + pruebas[i] + ", Run: " + Arrays.toString(squareUp(pruebas[i])));
+            System.out.println("Para n: " + pruebas[i] + ", Run: " + Arrays.toString(squareUp(pruebas[i])));
+        }
+    }
+
+    public static int maxMirror(int[] nums) {
+        int longitud = nums.length;
+        int cont= 0;
+        int max = 0;
+        for (int i = 0; i < longitud; i++){
+            cont = 0;
+            for (int j = longitud-1; i + cont < longitud && j > -1; j--){
+                if(nums[i+cont] == nums[j]){
+                    cont++;
+                } else {
+                    if (cont > 0){
+                        max = Math.max(cont,max);
+                        cont = 0;
+                    }
+                }
+            }
+            max = Math.max(cont,max);
+        }
+        return max;
+    }
+
+    public static void maxMirrorTest() {
+        System.out.println("\nmaxMirror");
+        int [][] pruebas = {{1,2,3,8,9,3,2},{1,2,1,4},{7,1,2,9,7,2},
+                {21,22,9,8,7,6,23,24,6,7,8,9,25,7,8,9},
+                {1,2,1,20,21,1,2,1,2,23,24,2,1,2,1,25},{1,2,3,2,1},
+                {1,2,3,3,8},{1,2,7,8,1,7},{1,1,1},{1},{},{9,1,1,4,2,1,1,1},
+                {5,9,9,4,5,4,9,9,2},{5,9,9,6,5,4,9,9,2},
+                {5,9,1,6,5,4,1,9,5}};
+        for (int i = 0; i < pruebas.length; i++) {
+            System.out.println("Para " + Arrays.toString(pruebas[i]) + ", Run: " + maxMirror(pruebas[i]));
+        }
+    }
+
+    public static boolean linearIn(int[] outer, int[] inner) {
+        int encontrados = 0;
+        if (inner.length == 0) {
+            return true;
+        }
+        int pos = 0;
+        for (int i = 0; i < outer.length; i++) {
+            if (outer[i] == inner[pos]) {
+                encontrados++;
+                pos++;
+            } else if (outer[i] > inner[pos]) {
+                return false;
+            }
+            if (encontrados == inner.length) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void linearInTest() {
+        System.out.println("\nlinearIn");
+        int [][] pruebasOuter = {{1,2,4,6},{1,2,4,6},{1,2,4,6},{2,2,4,4,6,6},
+                {2,2,2,2,2},{2,2,2,2,2},{2,2,2,2,4},{1,2,3},{1,2,3},{1,2,3},
+                {-1,0,3,3,3,10,12},{-1,0,3,3,3,10,12},{-1,0,3,3,3,10,12}};
+        int [][] pruebasInner = {{2,4},{2,3,4},{2,4},{2,4},{2,2},{2,4},
+                {2,4},{2},{-1},{},{-1,0,3,12},{0,3,12,14},{-1,10,11}};
+        for (int i = 0; i < pruebasInner.length; i++) {
+            System.out.println("Para outer: " + Arrays.toString(pruebasOuter[i])
+                    + " e inner: " + Arrays.toString(pruebasInner[i]) + ", Run: " +
+                    linearIn(pruebasOuter[i], pruebasInner[i]));
+        }
+    }
+
+    public static int[] seriesUp(int n) {
+        int[] arreglo = new int[n * (n + 1) / 2];
+        int i = 0;
+        for (int j = 1; j <= n; ++j) {
+            for (int k = 1; k <= j; ++k) {
+                arreglo[i++] = k;
+            }
+        }
+        return arreglo;
+    }
+
+    public static void seriesUpTest() {
+        System.out.println("\nseriesUp: ");
+        int [] pruebas = {3,4,2,1,0,6};
+        for (int i = 0; i < pruebas.length; i++) {
+            System.out.println("Para n: " + pruebas[i] + ", Run: " +
+                    Arrays.toString(seriesUp(pruebas[i])));
         }
     }
 }
