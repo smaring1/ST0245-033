@@ -3,6 +3,7 @@ public class ejercicioEnLinea {
         System.out.println("Array-2: ");
         countEvensTest();
         lucky13Test();
+        only14Test();
     }
 
     public static int countEvens(int[] nums) {
@@ -42,6 +43,27 @@ public class ejercicioEnLinea {
         int [][] pruebas = {{0,2,4},{1,2,3},{1,2,4},{2,7,2,8},{2,7,1,8},{3,7,2,8},{2,7,2,1},{1,2},{2,2},{2},{3},{}};
         for (int i = 0; i < pruebas.length; i++) {
             System.out.println("Run: " + lucky13(pruebas[i]));
+        }
+    }
+
+    public static boolean only14(int[] nums) {
+        int cont = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4 || nums[i] == 1) {
+                cont++;
+            }
+        }
+        if (cont == nums.length) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void only14Test() {
+        System.out.println("only14: ");
+        int [][] pruebas = {{1,4,1,4},{1,4,2,4},{1,1},{4,1},{2},{},{1,4,1,3},{3,1,3},{1},{4},{3,4},{1,3,4},{1,1,1},{1,1,1,5},{4,1,4,1}};
+        for (int i = 0; i < pruebas.length; i++) {
+            System.out.println("Run: " + only14(pruebas[i]));
         }
     }
 }
