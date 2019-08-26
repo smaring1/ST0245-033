@@ -4,6 +4,7 @@ public class ejercicioEnLinea {
         countEvensTest();
         lucky13Test();
         only14Test();
+        zeroMaxTest();
     }
 
     public static int countEvens(int[] nums) {
@@ -64,6 +65,29 @@ public class ejercicioEnLinea {
         int [][] pruebas = {{1,4,1,4},{1,4,2,4},{1,1},{4,1},{2},{},{1,4,1,3},{3,1,3},{1},{4},{3,4},{1,3,4},{1,1,1},{1,1,1,5},{4,1,4,1}};
         for (int i = 0; i < pruebas.length; i++) {
             System.out.println("Run: " + only14(pruebas[i]));
+        }
+    }
+
+    public static int[] zeroMax(int[] nums) {
+        int maximo = 0;
+        for (int j =0; j < nums.length -1;j++) {
+            if (nums[j] == 0) {
+                for (int i = j + 1; i <=nums.length -1;i++) {
+                    if ( nums[i] > maximo && nums[i] % 2 == 1 )
+                        maximo = nums[i];
+                }
+                nums[j] = maximo;
+                maximo = 0;
+            }
+        }
+        return nums;
+    }
+
+    public static void zeroMaxTest() {
+        System.out.println("zeroMax: ");
+        int [][] pruebas = {{0,5,0,3},{0,4,0,3},{0,1,0},{0,1,5},{0,2,0},{1},{0},{},{7,0,4,3,0,2},{7,0,4,3,0,1},{7,0,4,3,0,0},{7,0,1,0,0,7}};
+        for (int i = 0; i < pruebas.length; i++) {
+            System.out.println("Run: " + zeroMax(pruebas[i]).);
         }
     }
 }
