@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ejercicioEnLinea {
     public static void main(String[] args) {
         System.out.println("Array-2: ");
@@ -21,9 +23,9 @@ public class ejercicioEnLinea {
     public static void countEvensTest() {
         System.out.println("countEvens: ");
         int [][] pruebas = {{2,1,2,3,4},{2,2,0},{1,3,5},{},
-                            {11,9,0,1},{2,11,9,0},{2},{2,5,12}};
+                {11,9,0,1},{2,11,9,0},{2},{2,5,12}};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Run: " + countEvens(pruebas[i]));
+            System.out.println("Para " + Arrays.toString(pruebas[i]) + ", Run: " + countEvens(pruebas[i]));
         }
     }
 
@@ -43,9 +45,9 @@ public class ejercicioEnLinea {
     public static void lucky13Test() {
         System.out.println("lucky13: ");
         int [][] pruebas = {{0,2,4},{1,2,3},{1,2,4},{2,7,2,8},
-                            {2,7,1,8},{3,7,2,8},{2,7,2,1},{1,2},{2,2},{2},{3},{}};
+                {2,7,1,8},{3,7,2,8},{2,7,2,1},{1,2},{2,2},{2},{3},{}};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Run: " + lucky13(pruebas[i]));
+            System.out.println("Para " + Arrays.toString(pruebas[i]) + ", Run: " + lucky13(pruebas[i]));
         }
     }
 
@@ -65,10 +67,10 @@ public class ejercicioEnLinea {
     public static void only14Test() {
         System.out.println("only14: ");
         int [][] pruebas = {{1,4,1,4},{1,4,2,4},{1,1},{4,1},{2},{},
-                            {1,4,1,3},{3,1,3},{1},{4},{3,4},{1,3,4},
-                            {1,1,1},{1,1,1,5},{4,1,4,1}};
+                {1,4,1,3},{3,1,3},{1},{4},{3,4},{1,3,4},
+                {1,1,1},{1,1,1,5},{4,1,4,1}};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Run: " + only14(pruebas[i]));
+            System.out.println("Para " + Arrays.toString(pruebas[i]) + ", Run: " + only14(pruebas[i]));
         }
     }
 
@@ -90,11 +92,10 @@ public class ejercicioEnLinea {
     public static void zeroMaxTest() {
         System.out.println("zeroMax: ");
         int [][] pruebas = {{0,5,0,3},{0,4,0,3},{0,1,0},{0,1,5},
-                            {0,2,0},{1},{0},{},{7,0,4,3,0,2},
-                            {7,0,4,3,0,1},{7,0,4,3,0,0},{7,0,1,0,0,7}};
+                {0,2,0},{1},{0},{},{7,0,4,3,0,2},
+                {7,0,4,3,0,1},{7,0,4,3,0,0},{7,0,1,0,0,7}};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Run: " + zeroMax(pruebas[i]));
+            System.out.println("Para " + Arrays.toString(pruebas[i]) + ", Run: " + Arrays.toString(zeroMax(pruebas[i])));
         }
     }
 }
-
