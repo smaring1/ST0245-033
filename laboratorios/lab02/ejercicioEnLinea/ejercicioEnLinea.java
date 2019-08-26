@@ -87,7 +87,8 @@ public class ejercicioEnLinea {
         System.out.println("zeroMax: ");
         int [][] pruebas = {{0,5,0,3},{0,4,0,3},{0,1,0},{0,1,5},{0,2,0},{1},{0},{},{7,0,4,3,0,2},{7,0,4,3,0,1},{7,0,4,3,0,0},{7,0,1,0,0,7}};
         for (int i = 0; i < pruebas.length; i++) {
-            System.out.println("Run: " + zeroMax(pruebas[i]).);
+            System.out.println("Run: " + zeroMax(pruebas[i]));
         }
     }
 }
+
