@@ -17,14 +17,14 @@ public class ejercicioEnLinea {
     }
 
     public static int countEvens(int[] nums) {
-        int cont = 0;
-        for (int i = 0; i < nums.length; i++) {
+        int cont = 0;       // C1
+        for (int i = 0; i < nums.length; i++) { // C2 + C3 * n 
 
-            if ((nums[i]) % 2 == 0) {
-                cont++;
+            if ((nums[i]) % 2 == 0) {   // C4*n
+                cont++; // C5*n
             }
         }
-        return cont;
+        return cont;// C6
     }
 
     public static void countEvensTest() {
@@ -37,16 +37,16 @@ public class ejercicioEnLinea {
     }
 
     public static boolean lucky13(int[] nums) {
-        int cont = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1 || nums[i] == 3) {
-                cont++;
+        int cont = 0; // C_1
+        for (int i = 0; i < nums.length; i++) { // C_2 + C_3*n
+            if (nums[i] == 1 || nums[i] == 3) { // C_4 + C_5*n
+                cont++; // C_6*n
             }
         }
-        if (cont > 0) {
-            return false;
+        if (cont > 0) { // C_7
+            return false;// C_8
         }
-        return true;
+        return true; //C_9
     }
 
     public static void lucky13Test() {
@@ -59,16 +59,16 @@ public class ejercicioEnLinea {
     }
 
     public static boolean only14(int[] nums) {
-        int cont = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 4 || nums[i] == 1) {
-                cont++;
+        int cont = 0; // C_1
+        for (int i = 0; i < nums.length; i++) { // C_2+C_3*n
+            if (nums[i] == 4 || nums[i] == 1) { //C_3 + C_4*n
+                cont++; // C_5*n
             }
         }
-        if (cont == nums.length) {
-            return true;
+        if (cont == nums.length) { //C_6
+            return true; //C_7
         }
-        return false;
+        return false; //C_8
     }
 
     public static void only14Test() {
@@ -82,18 +82,18 @@ public class ejercicioEnLinea {
     }
 
     public static int[] zeroMax(int[] nums) {
-        int maximo = 0;
-        for (int j =0; j < nums.length -1;j++) {
-            if (nums[j] == 0) {
-                for (int i = j + 1; i <=nums.length -1;i++) {
-                    if ( nums[i] > maximo && nums[i] % 2 == 1 )
-                        maximo = nums[i];
+        int maximo = 0;//C_1
+        for (int j =0; j < nums.length -1;j++) {//C_2+C_3*n
+            if (nums[j] == 0) { //C_4 * n
+                for (int i = j + 1; i <=nums.length -1;i++) { // (C_5 + C_6*n)*n
+                    if ( nums[i] > maximo && nums[i] % 2 == 1 ) //C_7*n*n
+                        maximo = nums[i]; //C_8*n*n
                 }
-                nums[j] = maximo;
-                maximo = 0;
+                nums[j] = maximo; //C_9*n
+                maximo = 0; //C_10*n
             }
         }
-        return nums;
+        return nums; //C_11
     }
 
     public static void zeroMaxTest() {
@@ -107,16 +107,16 @@ public class ejercicioEnLinea {
     }
 
     public static int sum13(int[] nums) {
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != 13) {
-                sum += nums[i];
-            } else if (nums[i] == 13 && i < nums.length - 1) {
-                nums[i] = 0;
-                nums[i+1] = 0;
+        int sum = 0; //C_1
+        for (int i = 0; i < nums.length; i++) { //C_2+C_3*n
+            if (nums[i] != 13) { // C_4*n
+                sum += nums[i];// C_5*n
+            } else if (nums[i] == 13 && i < nums.length - 1) { //C_6+C_7*n
+                nums[i] = 0; //C_8*n
+                nums[i+1] = 0;//C_9*n
             }
         }
-        return sum;
+        return sum;//C_10
     }
 
     public static void sum13Test() {
