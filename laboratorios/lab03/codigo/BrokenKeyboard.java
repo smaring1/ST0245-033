@@ -54,8 +54,29 @@ public class BrokenKeyboard {
         } while (opcion == 0);
     }
 
-    public static String brokenKeyboard(String prueba) {
+    public static String brokenKeyboard(String prueba) { //Falta terminarlo.
         LinkedList<String> lista = new LinkedList<>();
-        return prueba; //Aún no se ha resuelto. Se subirá más tarde.
+        boolean modo = true; //Esta variable es el modo en el que se está ingresando el texto. True si estamos escribiendo al final y false si escribimos al inicio
+        int k = 0;
+        for (int i = 0; i < prueba.length(); i++) {
+            if (prueba.charAt(i) == '[') {
+                lista.addLast(prueba.substring(k, i));
+                for (int j = i; j < prueba.length(); j++) {
+                    if (prueba.charAt(j) == ']') {
+                        lista.addFirst(prueba.substring(i + 1, j));
+                        k = j + 1;
+                    }
+                    else if (j == prueba.length() - 1) {
+                        lista.addFirst(prueba.substring(i+1, j+1));
+                    }
+                }
+            }
+        }
+        String listaFinal = "";
+        for (String e : lista) {
+            listaFinal += e;
+        }
+
+        return listaFinal;
     }
 }
