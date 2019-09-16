@@ -1,5 +1,9 @@
 import java.util.Scanner;
 import java.util.LinkedList;
+/**
+*Para el funcionamiento de esta clase necesitamos los archivos en la 
+*carpeta de este proyecto.
+*/
 
 public class Interaccion {
 
