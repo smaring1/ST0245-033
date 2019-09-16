@@ -3,7 +3,7 @@
  * ejercicio del teclado roto.
  *
  * @author Simón Marín, Miguel Fernando Ramos
- * @version Septiembre 4, 2019.
+ * @version Septiembre 15, 2019.
  */
 
 import java.util.LinkedList;
