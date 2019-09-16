@@ -56,27 +56,43 @@ public class BrokenKeyboard {
 
     public static String brokenKeyboard(String prueba) { //Falta terminarlo.
         LinkedList<String> lista = new LinkedList<>();
-        boolean modo = true; //Esta variable es el modo en el que se está ingresando el texto. True si estamos escribiendo al final y false si escribimos al inicio
+        boolean alFinal = true;
         int k = 0;
         for (int i = 0; i < prueba.length(); i++) {
             if (prueba.charAt(i) == '[') {
-                lista.addLast(prueba.substring(k, i));
-                for (int j = i; j < prueba.length(); j++) {
-                    if (prueba.charAt(j) == ']') {
-                        lista.addFirst(prueba.substring(i + 1, j));
-                        k = j + 1;
-                    }
-                    else if (j == prueba.length() - 1) {
-                        lista.addFirst(prueba.substring(i+1, j+1));
-                    }
+                if (alFinal) {
+                    lista.addLast(prueba.substring(k,i));
+                } else {
+                    lista.addFirst(prueba.substring(k,i));
                 }
+
+                k = i + 1;
+                alFinal = false;
+            }
+
+            if (prueba.charAt(i) == ']') {
+                if (alFinal) {
+                    lista.addLast(prueba.substring(k,i));
+                } else {
+                    lista.addFirst(prueba.substring(k,i));
+                }
+
+                k = i + 1;
+                alFinal = true;
             }
         }
-        String listaFinal = "";
-        for (String e : lista) {
-            listaFinal += e;
+
+        if (alFinal) {
+            lista.addLast(prueba.substring(k));
+        } else {
+            lista.addFirst(prueba.substring(k));
         }
 
-        return listaFinal;
+        String resultado = "";
+        for (String a:
+             lista) {
+            resultado += a;
+        }
+        return resultado;
     }
 }
