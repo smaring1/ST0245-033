@@ -10,11 +10,11 @@ public class CalculadoraPolaca {
     public static void main(String[] args) {
         polacaTest();
     }
+    
     public static int polaca  (String elString){
         String[] elemento = elString.split(" ");
         Stack<Integer> pila= new Stack<>();
         int len = elemento.length;
-
 
         for(int i=0;i<elemento.length;i++){
             if(elemento[i].equals("+")){
