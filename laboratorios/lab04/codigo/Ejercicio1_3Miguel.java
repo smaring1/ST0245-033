@@ -5,27 +5,27 @@
  */
 public class Ejercicio1_3Miguel {
     public static void main(String[] args) {
-        BinaryTree yo = new BinaryTree("Simon Marin Giraldo");
-        yo.getRoot().setPadre("Fabio Marin Ramirez");
-        yo.getRoot().setMadre("Norfi Yamile Giraldo Gomez");
+        BinaryTree yo = new BinaryTree("Miguel Ramos Subero");
+        yo.getRoot().setPadre("Migeul Ramos Garcia");
+        yo.getRoot().setMadre("Helena García");
         Node papa = yo.getRoot().getPadre();
         Node mama = yo.getRoot().getMadre();
-        papa.setPadre("Luis Milagros Marin Vahos");
-        papa.setMadre("Maria Fabiola Ramirez Morales");
-        mama.setPadre("Francisco Javier Giraldo Aristizabal");
-        mama.setMadre("Maria Margarita Gomez Giraldo");
+        papa.setPadre("Andres Ramos");
+        papa.setMadre("Cristina Subero");
+        mama.setPadre("Roberto Garcia");
+        mama.setMadre("Ruth Mery Ramirez");
         Node abueloPaterno = papa.getPadre();
         Node abuelaPaterna = papa.getMadre();
         Node abueloMaterno = mama.getPadre();
         Node abuelaMaterna = mama.getMadre();
-        abueloPaterno.setPadre("Sebulon Marin");
-        abueloPaterno.setMadre("Anita Vahos");
-        abuelaPaterna.setPadre("Senon Ramirez");
-        abuelaPaterna.setMadre("Isabel Morales");
-        abueloMaterno.setPadre("Jesus Pascual Giraldo Aristizabal");
-        abueloMaterno.setMadre("Maria Dolores Aristizabal Duque");
-        abuelaMaterna.setPadre("Jesus Maria Giraldo Giralo");
-        abuelaMaterna.setMadre("Maria de Jesus Gomez De Giraldo");
+        abueloPaterno.setPadre("Jose Ramos");
+        abueloPaterno.setMadre("Josefa Bermude");
+        abuelaPaterna.setPadre("Gonzalo Garcia");
+        abuelaPaterna.setMadre("Isabel Montoya");
+        abueloMaterno.setPadre("Jesus Esteban Garcia Aristizabal");
+        abueloMaterno.setMadre("Maria Cristina Henao");
+        abuelaMaterna.setPadre("Jesus Maria Roldan");
+        abuelaMaterna.setMadre("Carmenza Gomez Ramires");
     }
 }
 
