@@ -1,7 +1,7 @@
 
 /**
  *
- * @author Simon Marin, Miguel Fernando Ramos
+ * @author Simón Marín, Miguel Fernando Ramos
  */
 public class Ejercicio1_3Miguel {
     public static void main(String[] args) {
