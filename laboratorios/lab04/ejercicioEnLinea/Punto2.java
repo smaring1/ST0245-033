@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Miguel Ramos, Simón Marin
+ * @author Simón Marín, Miguel Fernando Ramos
  */
 public class Laboratorio4 {
 
