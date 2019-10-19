@@ -3,7 +3,7 @@
  *
  * @author Simon Marin, Miguel Fernando Ramos
  */
-public class Ejercicio1_3 {
+public class Ejercicio1_3Simon {
     public static void main(String[] args) {
         BinaryTree yo = new BinaryTree("Simon Marin Giraldo");
         yo.getRoot().setPadre("Fabio Marin Ramirez");
